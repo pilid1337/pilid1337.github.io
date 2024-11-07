@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Жёсткий Linux</title>
+    <style>
+        .logo:hover {
+            transform: scale(1.2);
+        }
+
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .header {
+            background-color: gray;
+            color: white;
+            padding: 0.5%;
+            position: fixed;
+            width: 98%;
+            display: flex;
+            align-items: center;
+            z-index: 500;
+            border-radius: 15px;
+            font-size: 1.25vw;
+        }
+
+        .logo {
+            margin-right: 2%;
+            transition: transform 0.3s;
+        }
+
+        .title-text {
+            font-size: 1.5em;
+        }
+
+        .content {
+            display: flex;
+            padding-top: 7%;
+            gap: 2%;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .text-container {
+            max-width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html"><img src="logo.png" alt="logo" title="Home" width="20%" class="logo"/></a>
+        <div class="title-text">Жёсткий Linux</div>
+    </div>
+
+    <div class="content">
+        <div class="image-container">
+            <img src="linux-distro.webp" alt="LinuxDistroFamily" width = "50%">
+        </div>
+        <div class="text-container">
+            <h1><b>Выбор дистрибутива</b></h1>
+            <p>Выбор дистрибутива Linux зависит от ваших нужд и уровня опыта. Вот несколько рекомендаций:</p>
+            <ul>
+                <li><b>Ubuntu</b> — хороший выбор для начинающих, стабильный и поддерживаемый сообществом.</li>
+                <li><b>Debian</b> — стабильный и надёжный, популярен среди серверных администраторов.</li>
+                <li><b>Fedora</b> — подходит для тех, кто хочет использовать новейшие технологии.</li>
+                <li><b>Arch Linux</b> — для опытных пользователей, которым нравится кастомизация и контроль.</li>
+                <li><b>Mint</b> — для тех, кто ценит удобство и простоту, похож на Ubuntu.</li>
+            </ul>
+            <p>Выберите дистрибутив, исходя из вашего опыта и требований к системе.</p>
+        </div>
+    </div>
+</body>
+</html>
