@@ -1,42 +1,8 @@
 <html>
 <head>
     <title>Жёсткий Linux</title>
-
+    <link rel="stylesheet" href="styles.css">
     <style>
-        .logo:hover {
-            transform: scale(1.2);
-        }
-
-        body {
-            background-image: url('background.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: white;
-        }
-
-        .header {
-            background-color: gray;
-            color: white;
-            padding: 0.5%;
-            position: fixed;
-            width: 98%;
-            display: flex;
-            align-items: center;
-            z-index: 500;
-            border-radius: 15px;
-            font-size: 1.25vw;
-        }
-
-        .logo {
-            margin-right: 2%;
-            transition: transform 0.3s;
-        }
-
-        .title-text {
-            font-size: 1.5em;
-        }
-
         .content {
             padding-top: 7%;
             padding-left: 2%;
@@ -55,7 +21,7 @@
 <body>
     <div class="header">
         <a href="index.html">
-            <img src="logo.png" alt="logo" title="Home" width="20%" class="logo"/>
+            <img src="linux-tux.gif" alt="logo" title="Home" width="20%" class="logo"/>
         </a>
         <div class="title-text">Жёсткий Linux</div>
     </div>
@@ -64,29 +30,32 @@
         <h1><b>Аналоги программ, отсутствующих на Linux</b></h1>
         <p>Некоторые популярные программы отсутствуют на Linux, но для большинства есть достойные аналоги. Вот список таких программ и их альтернатив:</p>
 
-        <h2>1. Microsoft Office</h2>
+        <ul>
+        <h2>Microsoft Office</h2>
         <p><b>Аналоги</b>:  <a href="LibreDoc.odt"> LibreOffice </a>, <a href="https://helpcenter.onlyoffice.com/userguides.aspx"> OnlyOffice </a> </p>
         <p><b>Особенности</b>: LibreOffice наиболее совместим с Microsoft Office, но OnlyOffice имеет более похожий интерфейс.</p>
 
-        <h2>2. Adobe Photoshop</h2>
+        <h2>Adobe Photoshop</h2>
         <p><b>Аналоги</b>: <a href="https://www.gimp.org/docs/"> GIMP </a>, <a href="https://docs.krita.org/en/epub/KritaManual.epub"> Krita </a> </p>
         <p><b>Особенности</b>: GIMP обладает большинством нужных функций, но может потребовать доработки под профессиональные задачи. Krita больше подходит для цифрового рисования.</p>
 
-        <h2>3. Adobe Illustrator</h2>
+        <h2>Adobe Illustrator</h2>
         <p><b>Аналоги</b>:  <a href="https://readthedocs.org/projects/inkscape-manuals/downloads/pdf/latest/"> Inkscape </a></p>
         <p><b>Особенности</b>: Inkscape поддерживает векторную графику и большинство стандартных форматов, но может отличаться в интерфейсе и удобстве использования.</p>
 
-        <h2>4. Adobe Premiere Pro</h2>
+        <h2>Adobe Premiere Pro</h2>
         <p><b>Аналоги</b>: <a href="https://www.blackmagicdesign.com/products/davinciresolve/training"> DaVinci Resolve </a></p>
         <p><b>Особенности</b>: DaVinci Resolve – мощный редактор, особенно для цветокоррекции, но требует более мощного железа.</p>
 
-        <h2>5. Adobe Lightroom</h2>
+        <h2>Adobe Lightroom</h2>
         <p><b>Аналоги</b>: <a href="https://docs.darktable.org/usermanual/4.0/en/"> Darktable </a>, <a href="https://rawtherapee.com/2015/03/documentation/"> RawTherapee </a></p>
         <p><b>Особенности</b>: Darktable подходит для цветокоррекции и работы с RAW-файлами, но интерфейс может показаться сложным.</p>
 
-        <h2>6. Notepad++</h2>
+        <h2>Notepad++</h2>
         <p><b>Аналоги</b>: <a href="https://code.visualstudio.com/docs/"> Code - OSS </a></p>
         <p><b>Особенности</b>: Code - OSS имеет множество расширений и может работать с разными языками программирования.</p>
+
+        </ul>
     </div>
 </body>
 </html>

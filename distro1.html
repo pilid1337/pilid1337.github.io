@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Жёсткий Linux</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .content {
+            display: flex;
+            padding-top: 7%;
+            gap: 2%;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .text-container {
+            max-width: 50%;
+        }
+
+        .form-container {
+            max-width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #000; /* Цвет текста — чёрный */
+        }
+
+        .form-container label {
+            font-weight: bold;
+            color: #000; /* Цвет текста — чёрный */
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .result p {
+            font-size: 1.2em;
+            color: #000;
+        }
+        .form-container h2 {
+            color: #000;
+        }
+
+        .radio-group {
+        display: flex;
+        gap: 15px;
+        align-items: center; /* Выровнять переключатели по центру строки */
+    }
+
+    .radio-group label {
+        font-weight: normal; /* Менее жирный текст для меток переключателей */
+    }
+</style>
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" target="_top"><img src="linux-tux.gif" alt="logo" title="Home" width="20%" class="logo"/></a>
+        <div class="title-text">Жёсткий Linux</div>
+    </div>
+
+    <div class="content">
+        <div class="image-container">
+            <img src="linux-distro.webp" alt="LinuxDistroFamily" width="50%">
+        </div>
+        <div class="text-container">
+            <h1><b>Выбор дистрибутива</b></h1>
+            <p>Выбор дистрибутива Linux зависит от ваших нужд и уровня опыта. Вот несколько рекомендаций:</p>
+            <h3>
+            <ol>
+                <li><b><a href="Arch.html" target="content">Arch Linux</a></b></li>
+                <li><b><a href="Ubuntu.html" target="content">Ubuntu</a></b></li>
+                <li><b><a href="Debian.html" target="content">Debian</a></b></li>
+                <li><b><a href="Fedora.html" target="content">Fedora</a></b></li>
+                <li><b><a href="Mint.html" target="content">Mint</a></b></li>
+            </ol>
+            </h3>
+            <p>Выберите дистрибутив, исходя из вашего опыта и требований к системе.</p>
+
+            <div class="form-container">
+    <h2>Пожалуйста, заполните форму</h2>
+    <form id="distroForm">
+        <label for="experience">Уровень опыта:</label>
+        <select id="experience">
+            <option value="beginner">Начинающий</option>
+            <option value="intermediate">Средний</option>
+            <option value="expert">Опытный</option>
+        </select>
+
+        <label for="usage">Основное назначение системы:</label>
+        <select id="usage">
+            <option value="home">Для дома</option>
+            <option value="work">Для работы</option>
+            <option value="server">Для сервера</option>
+        </select>
+
+        <label>Предпочтения по стабильности:</label>
+        <div class="radio-group">
+
+            <label for="stable">Стабильность</label>
+            <input type="radio" id="stable" name="stability" value="stable">
+
+            <label for="cuttingEdge">Современные технологии</label>
+            <input type="radio" id="cuttingEdge" name="stability" value="cuttingEdge">
+        </div>
+
+        <label for="comments">Комментарий:</label>
+        <textarea id="comments" placeholder="Опишите свои требования или пожелания..."></textarea>
+
+        <button type="button" onclick="showRecommendation()">Показать рекомендацию</button>
+    </form>
+
+    <div class="result" id="result"></div>
+</div>
+        </div>
+    </div>
+
+    <script>
+        function showRecommendation() {
+            var experience = document.getElementById('experience').value;
+            var usage = document.getElementById('usage').value;
+            var stability = document.querySelector('input[name="stability"]:checked') ? document.querySelector('input[name="stability"]:checked').value : '';
+            var comments = document.getElementById('comments').value;
+
+            var resultText = "Рекомендации для вас:\n";
+
+            if (experience === 'beginner') {
+                resultText += "- Для начинающих лучше всего подойдет Ubuntu или Mint.\n";
+            } else if (experience === 'intermediate') {
+                resultText += "- Попробуйте Fedora или Debian для более гибкой настройки.\n";
+            } else {
+                resultText += "- Arch Linux — лучший выбор для опытных пользователей.\n";
+            }
+
+            if (usage === 'home') {
+                resultText += "- Для использования дома идеально подходят Ubuntu или Mint.\n";
+            } else if (usage === 'work') {
+                resultText += "- Fedora или Debian будут хорошими выбором для работы.\n";
+            } else {
+                resultText += "- Для серверов лучше выбрать Debian или Ubuntu Server.\n";
+            }
+
+            if (stability === 'stable') {
+                resultText += "- Рекомендуется выбирать стабильные дистрибутивы (например, Debian, Ubuntu).\n";
+            } else if (stability === 'cuttingEdge') {
+                resultText += "- Если вам важны новейшие технологии, Fedora или Arch Linux будут хорошим выбором.\n";
+            }
+
+            if (comments) {
+                resultText += "\nВаши комментарии: " + comments;
+            }
+
+            document.getElementById('result').innerHTML = "<p>" + resultText.replace(/\n/g, '<br>') + "</p>";
+        }
+    </script>
+</body>
+</html>
